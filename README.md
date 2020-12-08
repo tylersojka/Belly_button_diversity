@@ -42,7 +42,9 @@ The website makes use of boostrap components including a navbar, search box, and
 
 Upon first loading the page, the profile for the first subject, 940, is loaded. The plots are hidden until you select a plot type from the navbar. To change subjects, you can simply select a new one from the dropdown menu, or manually enter a subject number in the search box. When a new subject is selected, the plots are recreated with the subjects bellybutton profile.
 
-All plots are created on the backend using JavaScript and plotly.js in the charts.js file. jQuery was used for most of the event handling. d3.js was used for the data fetching. 
+All plots are created on the backend using JavaScript and plotly.js in the charts.js file. jQuery was used for most of the event handling. d3.js was used for the data fetching.
+
+The webpage is currently being hosted on Heroku. Heroku was used because its free and was quite simple to set up. To host this page on Heroku, all that was needed was to add the index.php file with one line of code in it. To view this website, please visit: https://bellybuttonsite.herokuapp.com/
 
 ## Results
 
