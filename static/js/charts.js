@@ -5,7 +5,7 @@ function init() {
   // Use the list of sample names to populate the select options
   d3.json("static/js/samples.json").then((data) => {
     var sampleNames = data.names;
-
+    console.log(data)
     
 // old for each to append samples to selector tag for old dropdown
     // sampleNames.forEach((sample) => {
@@ -98,6 +98,7 @@ function buildMetadata(sample) {
     var metadata = data.metadata;
     // Filter the data for the object with the desired sample number
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
+
     var result = resultArray[0];
     // Use d3 to select the panel with id of `#sample-metadata`
     var PANEL = d3.select("#sample-metadata");
@@ -123,6 +124,7 @@ function buildCharts(sample) {
     // 3. Create a variable that holds the samples array. 
     var samples = data.samples;
     var metaData = data.metadata;
+    console.log(samples)
     // 4. Create a variable that filters the samples for the object with the desired sample number.
     var resultArray = samples.filter(sampleObj => sampleObj.id == sample);
     var metaDataArray = metaData.filter(sampleObj => sampleObj.id == sample);
@@ -138,7 +140,7 @@ function buildCharts(sample) {
     let values = result.sample_values;
     // console.log(wfreq)
     // console.log(ids.slice(0,10))
-    // console.log(values.slice(0,10))
+    console.log(values.slice(0,10))
     // console.log(labels)
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
